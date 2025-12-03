@@ -10,7 +10,7 @@ A modern REST API built with Next.js 16, TypeScript, and Tailwind CSS. This proj
 ## 🖼️ Project Overview
 
 ![Project Screenshot](./public/landing-page.png)
-_Example of the API in action - replace with your own screenshot or diagram_
+_Landing Page_
 
 ## 🚀 Features
 
@@ -30,27 +30,6 @@ _Example of the API in action - replace with your own screenshot or diagram_
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **Animation**: [Framer Motion](https://www.framer.com/motion/)
 - **UI Components**: Radix UI primitives
-
-## 📦 Dependencies
-
-### Core Dependencies
-
-- `next` - React framework
-- `react` & `react-dom` - UI library
-- `@radix-ui/react-slot` - Component composition
-- `lucide-react` - Icons
-- `framer-motion` - Animations
-- `next-themes` - Theme management
-- `class-variance-authority` - Class composition
-- `clsx` & `tailwind-merge` - Class utility functions
-
-### Dev Dependencies
-
-- `@types/node`, `@types/react`, `@types/react-dom` - Type definitions
-- `eslint` & `eslint-config-next` - Code linting
-- `tailwindcss` - Styling
-- `typescript` - Type checking
-- `prettier` - Code formatting
 
 ## 🚀 Quick Start
 
@@ -79,19 +58,6 @@ _Example of the API in action - replace with your own screenshot or diagram_
 
 4. **Open your browser**
    Visit [http://localhost:3000](http://localhost:3000) to see the result.
-
-## 📁 Project Structure
-
-```
-.
-├── app/                    # Next.js 13+ app directory
-│   ├── globals.css         # Global styles
-│   ├── layout.tsx          # Root layout
-│   └── page.tsx            # Home page
-├── components/            # Reusable components
-├── lib/                   # Utility functions
-└── public/                # Static assets
-```
 
 ## 🛠️ Available Scripts
 
