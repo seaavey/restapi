@@ -13,11 +13,11 @@ export default function Hero() {
 
             <div className="relative z-10 mx-auto max-w-4xl text-center">
                 <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
-                    Free{' '}
+                    Powerful API {''}
                     <span className="from-primary to-primary/70 bg-linear-to-r bg-clip-text text-transparent">
-                        Download & API
+                        Platform for
                     </span>{' '}
-                    Platform
+                    Modern Applications
                 </h1>
 
                 <p className="text-foreground/80 mx-auto mb-10 max-w-2xl text-lg md:text-xl">
