@@ -1,11 +1,29 @@
 # Next.js REST API Project
 
-![Next.js](https://img.shields.io/badge/Next.js-16.0.6-black?style=for-the-badge&logo=next.js)
+![Next.js](https://img.shields.io/badge/Next.js-16.0.7-black?style=for-the-badge&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-blue?style=for-the-badge&logo=tailwind-css)
 ![REST API](https://img.shields.io/badge/API-REST-green?style=for-the-badge&logo=api)
 
 A modern REST API built with Next.js 16, TypeScript, and Tailwind CSS. This project provides a solid foundation for building scalable APIs with the latest web technologies.
+
+> [!WARNING]
+> **Critical Security Vulnerability: CVE-2025-55182 & CVE-2025-66478**
+>
+> A critical Remote Code Execution (RCE) vulnerability affecting **React Server Components (RSC)** was found in:
+>
+> - React **19.0.0 – 19.2.0**
+> - Next.js **≤ 16.0.6**
+>
+> These vulnerabilities allow **unauthenticated attackers to execute arbitrary code on the server**.
+>
+> This project has been **patched** with secure versions:
+>
+> - **Next.js 16.0.7**
+> - **React 19.2.1**
+> - **React DOM 19.2.1**
+>
+> If you clone, fork, or contribute to this repository, ensure you are using the patched versions to remain secure.
 
 ## 📖 Description
 
@@ -23,8 +41,13 @@ Perfect for developers looking to build scalable APIs with the latest web techno
 
 ## 🖼️ Project Overview
 
-![Landing Page Dark Mode](./public/images/landing-page-dark.png)
-![Landing Page Light Mode](./public/images/landing-page-light.png)
+### Landing Page Dark Mode
+
+![Landing Page Dark Mode](https://api.seavvey.web.id/images/landing-page-dark.png)
+
+### Landing Page Light Mode
+
+![Landing Page Light Mode](https://api.seavvey.web.id/images/landing-page-light.png)
 
 ## 🚀 Features
 
