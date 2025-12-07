@@ -1,3 +1,9 @@
+import DocsHero from '@/components/sections/Docs/Hero';
+
 export default function DocsPage() {
-    return <h1>Docs Page</h1>;
+    return (
+        <div className="flex flex-col items-center">
+            <DocsHero />
+        </div>
+    );
 }

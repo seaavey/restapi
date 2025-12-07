@@ -15,7 +15,7 @@ export default function DocsLayout({ children }: { children: React.ReactNode }) 
                 <DocsSidebar />
                 <div className="flex flex-1 flex-col">
                     <DocsNavbar />
-                    <main className="p-6 pl-72">{children}</main>
+                    <main className="p-6 md:pl-72">{children}</main>
                 </div>
             </div>
         </DocsSidebarProvider>

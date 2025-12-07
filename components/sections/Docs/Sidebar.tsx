@@ -14,8 +14,8 @@ export default function DocsSidebar() {
         {
             name: 'Getting Started',
             children: [
-                { name: 'Setup', href: '/docs/setup' },
-                { name: 'Configuration', href: '/docs/configuration' },
+                { name: 'Setup', href: '#' },
+                { name: 'Configuration', href: '#' },
             ],
         },
     ];
