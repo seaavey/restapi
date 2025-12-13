@@ -10,7 +10,7 @@ import {
 export default function DocsBody() {
     return (
         <div className="flex flex-1 flex-col">
-            <Card>
+            <Card className="w-1/2">
                 <CardHeader>
                     <CardTitle>Card Title</CardTitle>
                     <CardDescription>Card Description</CardDescription>

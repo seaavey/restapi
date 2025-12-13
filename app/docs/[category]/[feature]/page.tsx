@@ -1,6 +1,7 @@
 import DocsBody from '@/components/sections/Docs/Body';
 import DocsHeader from '@/components/sections/Docs/Header';
 import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 
 const formatTitle = (value: string) =>
     value.replace(/[-_]/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
@@ -11,13 +12,13 @@ export async function generateMetadata(props: {
         feature: string;
     }>;
 }): Promise<Metadata> {
-    const params = await props.params;
+    const { category, feature } = await props.params;
 
-    const category = formatTitle(params.category);
-    const feature = formatTitle(params.feature);
+    const categoryTitle = formatTitle(category);
+    const featureTitle = formatTitle(feature);
 
-    const title = `${feature} - ${category} | Seaavey APIs`;
-    const description = `Documentation for ${feature} in the ${category} category on Seaavey APIs.`;
+    const title = `${featureTitle} - ${categoryTitle} | Seaavey APIs`;
+    const description = `Documentation for ${featureTitle} in the ${categoryTitle} category on Seaavey APIs.`;
 
     return {
         title,
@@ -27,7 +28,6 @@ export async function generateMetadata(props: {
             description,
             type: 'article',
         },
-
         twitter: {
             card: 'summary',
             title,
@@ -42,10 +42,22 @@ export default async function DocsPage(props: {
         feature: string;
     }>;
 }) {
-    const params = await props.params;
+    const { category, feature } = await props.params;
+
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/v1/check?feature=${feature}`, {
+        method: 'HEAD',
+        cache: 'no-store',
+    });
+
+    const hasFeature = res.ok;
+
+    if (!hasFeature) {
+        return notFound();
+    }
+
     return (
         <div className="flex flex-col space-y-4">
-            <DocsHeader feature={params.feature} category={params.category} />
+            <DocsHeader feature={feature} category={category} />
             <DocsBody />
         </div>
     );
