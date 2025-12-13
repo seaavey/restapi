@@ -49,9 +49,7 @@ export function SidebarItem({ item, level = 0, onNavigate }: SidebarItemProps) {
             <Button
                 variant="ghost"
                 onClick={() => setOpen(v => !v)}
-                className={`flex w-full justify-between px-3 py-2 text-sm ${
-                    isChildActive ? 'bg-accent font-medium' : ''
-                }`}
+                className={`flex w-full justify-between px-3 py-2 text-sm`}
                 style={{ paddingLeft }}
             >
                 <span>{item.name}</span>

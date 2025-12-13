@@ -12,7 +12,17 @@ export const Navigation: INavigationItem[] = [
         children: [
             {
                 name: 'Search',
-                children: [{ name: 'Lyrics', href: '/docs/search/lyrics' }],
+                children: [
+                    { name: 'Lyrics', href: '/docs/search/lyrics' },
+                    { name: 'Chords', href: '/docs/search/chords' },
+                ],
+            },
+            {
+                name: 'Song',
+                children: [
+                    { name: 'Lyrics', href: '/docs/song/lyrics' },
+                    { name: 'Chords', href: '/docs/song/chords' },
+                ],
             },
         ],
     },
