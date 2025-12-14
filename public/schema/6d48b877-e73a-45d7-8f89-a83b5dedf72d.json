@@ -1,0 +1,106 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://api.seavvey.web.id/schema/6d48b877-e73a-45d7-8f89-a83b5dedf72d.json",
+    "title": "API Service Schema",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": ["key", "path", "description", "features"],
+        "properties": {
+            "key": {
+                "type": "string",
+                "description": "Service key (e.g. search)"
+            },
+            "path": {
+                "type": "string",
+                "pattern": "^/",
+                "description": "Base API path"
+            },
+            "description": {
+                "type": "string"
+            },
+            "features": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/$defs/feature"
+                }
+            }
+        }
+    },
+    "$defs": {
+        "feature": {
+            "type": "object",
+            "required": ["key", "path", "method", "summary"],
+            "properties": {
+                "key": {
+                    "type": "string"
+                },
+                "path": {
+                    "type": "string",
+                    "pattern": "^/"
+                },
+                "method": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": ["GET", "POST"]
+                    }
+                },
+                "summary": {
+                    "type": "string"
+                },
+                "queryParameters": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/$defs/queryParameter"
+                    }
+                },
+                "responses": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "#/$defs/response"
+                    }
+                }
+            }
+        },
+        "queryParameter": {
+            "type": "object",
+            "required": ["name", "type", "required"],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": ["string", "number", "boolean"]
+                },
+                "required": {
+                    "type": "boolean"
+                },
+                "default": {}
+            }
+        },
+        "response": {
+            "type": "object",
+            "required": ["type"],
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": ["array", "object"]
+                },
+                "items": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "oneOf": [
+                            { "type": "string" },
+                            {
+                                "type": "object",
+                                "additionalProperties": { "type": "string" }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
