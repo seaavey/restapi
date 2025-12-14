@@ -2,6 +2,7 @@ import DocsBody from '@/components/sections/Docs/Body';
 import DocsHeader from '@/components/sections/Docs/Header';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+
 const formatTitle = (value: string) =>
     value.replace(/[-_]/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
 
@@ -57,7 +58,7 @@ export default async function DocsPage(props: {
     return (
         <div className="flex flex-col space-y-4">
             <DocsHeader feature={feature} category={category} />
-            <DocsBody />
+            <DocsBody category={category} feature={feature} />
         </div>
     );
 }
