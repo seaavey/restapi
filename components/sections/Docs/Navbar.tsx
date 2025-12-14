@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
-import { useDocsSidebar } from '@/components/contexts/DocsSidebarContext';
+import { useDocsSidebar } from '@/contexts/DocsSidebarContext';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
 
 export default function DocsNavbar() {

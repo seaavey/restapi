@@ -1,7 +1,7 @@
 import DocsNavbar from '@/components/sections/Docs/Navbar';
 import DocsSidebar from '@/components/sections/Docs/Sidebar';
-import { DocsSidebarProvider } from '@/components/contexts/DocsSidebarContext';
-import PageTransition from '@/components/providers/Transition';
+import { DocsSidebarProvider } from '@/contexts/DocsSidebarContext';
+import PageTransition from '@/providers/Transition';
 import type { Metadata } from 'next';
 import { Toaster } from 'react-hot-toast';
 

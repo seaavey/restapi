@@ -1,8 +1,8 @@
 'use client';
 
-import { Navigation } from '@/components/constants/navigation';
+import { Navigation } from '@/constants/navigation';
 import { SidebarItem } from './SidebarItem';
-import { useDocsSidebar } from '@/components/contexts/DocsSidebarContext';
+import { useDocsSidebar } from '@/contexts/DocsSidebarContext';
 
 export default function DocsSidebar() {
     const { isSidebarOpen, closeSidebar } = useDocsSidebar();
