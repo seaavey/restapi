@@ -24,11 +24,9 @@ export async function GET(_req: Request, props: { params: Promise<{ feature: str
     }
 
     // Find feature by key (flatten all services)
-    const featureData = schema.services
-        .flatMap(service => service.features)
-        .find(f => f.key === feature);
+    const data = schema.services.flatMap(service => service.features).find(f => f.key === feature);
 
-    if (!featureData) {
+    if (!data) {
         return NextResponse.json(
             {
                 ok: false,
@@ -41,7 +39,7 @@ export async function GET(_req: Request, props: { params: Promise<{ feature: str
     return NextResponse.json(
         {
             ok: true,
-            data: featureData,
+            data,
         },
         {
             status: 200,

@@ -1,5 +1,5 @@
-import DocsBody from '@/components/sections/Docs/Body';
-import DocsHeader from '@/components/sections/Docs/Header';
+import DocsBody from '@/layouts/Docs/Body';
+import DocsHeader from '@/layouts/Docs/Header';
 import { Feature } from '@/types/APISchema';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';

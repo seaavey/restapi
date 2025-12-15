@@ -1,10 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
-import { useDocsSidebar } from '@/contexts/DocsSidebarContext';
+import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
+import { useDocsSidebar } from '@/contexts/DocsSidebarContext';
 
 export default function DocsNavbar() {
     const { toggleSidebar } = useDocsSidebar();

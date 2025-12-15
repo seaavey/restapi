@@ -7,7 +7,7 @@ import { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { Button } from '@/components/ui/button';
-import { INavigationItem } from '@/constants/navigation';
+import { INavigationItem } from '@/types/navigation';
 
 interface SidebarItemProps {
     item: INavigationItem;
