@@ -43,11 +43,11 @@ Perfect for developers looking to build scalable APIs with the latest web techno
 
 ### Landing Page Dark Mode
 
-![Landing Page Dark Mode](https://api.seavvey.web.id/images/landing-page-dark.png)
+![Landing Page Dark Mode](https://api.seaavey.site/images/landing-page-dark.png)
 
 ### Landing Page Light Mode
 
-![Landing Page Light Mode](https://api.seavvey.web.id/images/landing-page-light.png)
+![Landing Page Light Mode](https://api.seaavey.site/images/landing-page-light.png)
 
 ## 🚀 Features
 

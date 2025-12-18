@@ -17,20 +17,20 @@ export const metadata: Metadata = {
     description:
         'Build and manage your APIs with our powerful platform. Secure, scalable, and developer-friendly API solutions for modern applications.',
     keywords: ['API', 'REST', 'Next.js', 'API Platform', 'Developer Tools', 'API Management'],
-    authors: [{ name: 'Your Name', url: 'https://api.seavvey.web.id' }],
+    authors: [{ name: 'Your Name', url: 'https://api.seaavey.site' }],
     creator: 'Muhammad Adriansyah',
     publisher: 'Seaavey Developer',
     openGraph: {
         type: 'website',
         locale: 'en_US',
-        url: 'https://api.seavvey.web.id',
+        url: 'https://api.seaavey.site',
         title: 'RestAPI - Your Next Generation API Platform',
         description:
             'Build and manage your APIs with our powerful platform. Secure, scalable, and developer-friendly API solutions for modern applications.',
         siteName: 'RestAPI',
         images: [
             {
-                url: 'https://api.seavvey.web.id/og-image.png',
+                url: 'https://api.seaavey.site/og-image.png',
                 width: 1200,
                 height: 630,
                 alt: 'RestAPI - Your Next Generation API Platform',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         title: 'RestAPI - Your Next Generation API Platform',
         description:
             'Build and manage your APIs with our powerful platform. Secure, scalable, and developer-friendly API solutions for modern applications.',
-        images: ['https://api.seavvey.web.id/twitter-image.png'],
+        images: ['https://api.seaavey.site/twitter-image.png'],
     },
     robots: {
         index: true,
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
         },
     },
     alternates: {
-        canonical: 'https://api.seavvey.web.id',
+        canonical: 'https://api.seaavey.site',
     },
     category: 'technology',
 };

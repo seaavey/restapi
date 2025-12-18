@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://api.seavvey.web.id/schema/6d48b877-e73a-45d7-8f89-a83b5dedf72d.json",
+    "$id": "https://api.seaavey.site/schema/6d48b877-e73a-45d7-8f89-a83b5dedf72d.json",
     "title": "API Service Schema v1",
     "type": "object",
     "required": ["services"],

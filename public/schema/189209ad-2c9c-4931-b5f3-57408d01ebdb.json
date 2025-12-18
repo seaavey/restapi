@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://api.seavvey.web.id/schema/189209ad-2c9c-4931-b5f3-57408d01ebdb.json",
+    "$id": "https://api.seaavey.site/schema/189209ad-2c9c-4931-b5f3-57408d01ebdb.json",
     "title": "API Service Schema v2",
     "type": "object",
     "properties": {
