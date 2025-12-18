@@ -143,6 +143,7 @@ export default function Navbar() {
 
                                     <button
                                         onClick={() => setIsMobileMenuOpen(false)}
+                                        aria-label="Open navigation menu"
                                         className="text-foreground"
                                     >
                                         <div className="flex w-6 cursor-pointer flex-col gap-[5px]">
