@@ -12,7 +12,7 @@ export const URL_REGEX = /https?:\/\/[^\s"'<>]+/g;
  * @example https://tikwm.com/video/1234567890
  */
 export const TIKTOK_REGEX =
-    /^(https?:\/\/)?(www\.)?(tiktok\.com\/(@[\w.-]+\/video\/\d+|v\/\d+|embed\/\d+)|(?:vm|vt)\.tiktok\.com\/[\w-]+\/?|tikwm\.com\/video\/\d+)(?:[?#].*)?$/i;
+    /^(https?:\/\/)?(www\.)?(tiktok\.com\/(@[\w.-]+\/(video|photo)\/\d+|v\/\d+|embed\/\d+)|(?:vm|vt)\.tiktok\.com\/[\w-]+\/?|tikwm\.com\/video\/\d+)(?:[?#].*)?$/i;
 
 /**
  * Regex to match a Pinterest URL or video ID

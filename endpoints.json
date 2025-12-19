@@ -141,6 +141,35 @@
                         },
                         "500": { "success": false, "message": "Failed to fetch data" }
                     }
+                },
+                {
+                    "key": "tiktok",
+                    "path": "/tiktok",
+                    "method": ["GET"],
+                    "summary": "Download video & image from tiktok",
+                    "queryParameters": [
+                        {
+                            "name": "url",
+                            "type": "string",
+                            "required": true
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "success": true,
+                            "message": null,
+                            "data": {
+                                "title": "“Detik-detik yang Membuat Nafas Tertahan.” Di tengah sisa banjir yang masih menyisakan arus sungai begitu deras di Aceh, seorang gadis kecil tampak berusaha tenang saat relawan hendak membantunya menyeberang. Pegangan kabel jadi satu-satunya pengaman di atas derasnya air. Teriaknya memanggil-manggil \"Ayah\"—ketegangan itu terasa sampai ke kita yang menonton. Semoga proses pemulihan berjalan cepat, dan semua keluarga bisa kembali merasa aman. Kebaikan sekecil apa pun hari ini, berarti sangat besar bagi mereka. #Aceh #BanjirAceh #RelawanIndonesia #Kemanusiaan #InilahDotCom",
+                                "audio": "https://dl.snapcdn.app/get?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJodHRwczovL3YxNi1pZXMtbXVzaWMudGlrdG9rY2RuLmNvbS9jOWQyOTM1N2ExYzUzNjdhOTRhYTFmN2FiNjBkNjNjMi82OTRlMWM1OS92aWRlby90b3MvYWxpc2cvdG9zLWFsaXNnLXYtMjdkY2Q3L29JUFRwdlNDSWNpQUE5M2xEdk1USGxpVUJkRVlKZFZBTU1haFUvP2E9NTgzOTY1JmJ0aT1PVGc3UUdvNVFITTZPalpBTFRBellDTXZjQ014TkROZyZjaD0wJmNyPTAmZHI9MCZlcj0wJmxyPWRlZmF1bHQmY2Q9MCU3QzAlN0MwJTdDMCZicj0yNTAmYnQ9MTI1JmZ0PWE0M1dIbjF-enZXaVE5QUJibTMtc2RhdE9mWHFZbGFuS3A5TWhXTHJLJm1pbWVfdHlwZT1hdWRpb19tcGVnJnFzPTYmcmM9WkdZOGFUVm5PVGd6T1djOE96bzJQRUJwTXp4b09uYzVjbmR1TnpNek9EVThORUJqTXpWZVlqTmVOUzB4TkdJeFlUWmVZU05lWmkwdE1tUnJiRzloTFMxa01TMXpjdyUzRCUzRCZ2dnBsPTEmbD0yMDI1MTIxOTEzMjUxMUE4RUIyMzU5QThDOUU3NzgzM0VCJmJ0YWc9ZTAwMGI4MDAwJnNocD1kMDViMTRiZCZzaGNwPS0iLCJmaWxlbmFtZSI6IlRpa0Rvd25sb2FkZXIuaW9fNzU4MTYxMTkzODczMjQxMjE3Ni5tcDMiLCJuYmYiOjE3NjYxMjI1MzMsImV4cCI6MTc2NjEyNjEzMywiaWF0IjoxNzY2MTIyNTMzfQ.uuMCtZY1cRiR7yenDNFHvE5Po1o7pJ8y29qbKqS-984",
+                                "video": "https://v77.tiktokcdn.com/6d6ac36b9685a8d459f5767fbb08a71a/69463349/video/tos/alisg/tos-alisg-pve-0037/okpBNlPA00QDWn9wQFYVI9fwCyBF3TEpgIeEpC/?a=1233&bti=OUBzOTg7QGo6OjZAL3AjLTAzYCMxNDNg&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=5040&bt=2520&cs=0&ds=6&ft=aSkaK31~zvWiQ9ABbm3-sdFtOfXqYlanKp9MhWLrK&mime_type=video_mp4&qs=0&rc=NTQ1ODY4aWQ7NDc7NjtkaEBpM3M0c3g5cmluNzMzODgzNUAzYWIxXl5eXjAxL2MuLS8wYSNjNnFtMmRjbG9hLS1kLzZzcw%3D%3D&vvpl=1&l=20251219132511A8EB2359A8C9E77833EB&btag=e000b8000&cc=13"
+                            }
+                        },
+                        "400": {
+                            "success": false,
+                            "message": "URL parameter is required"
+                        },
+                        "500": { "success": false, "message": "Failed to fetch data" }
+                    }
                 }
             ]
         }
