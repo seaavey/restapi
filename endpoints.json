@@ -172,6 +172,78 @@
                     }
                 }
             ]
+        },
+        {
+            "key": "tools",
+            "path": "/api/tools",
+            "description": "Utility and tools endpoints.",
+            "features": [
+                {
+                    "key": "upscale",
+                    "path": "/upscale",
+                    "method": ["POST", "GET"],
+                    "summary": "Upscale / enhance image quality using AI",
+                    "queryParameters": [
+                        {
+                            "name": "file",
+                            "type": "file",
+                            "required": true,
+                            "description": "Image file (required for GET request)"
+                        },
+                        {
+                            "name": "url",
+                            "type": "string",
+                            "required": false,
+                            "description": "Image URL (required for POST request)"
+                        },
+                        {
+                            "name": "mode",
+                            "type": "string",
+                            "required": false,
+                            "default": "restore",
+                            "enum": ["fast", "ultra", "restore"]
+                        }
+                    ],
+                    "bodyParameters": [
+                        {
+                            "name": "file",
+                            "type": "file",
+                            "required": false,
+                            "description": "Image file (required for POST request, multipart/form-data)"
+                        }
+                    ],
+                    "timeouts": {
+                        "request": 15000,
+                        "total": 90000
+                    },
+                    "responses": {
+                        "200": {
+                            "success": true,
+                            "message": null,
+                            "data": {
+                                "status": "succeeded",
+                                "resultUrl": "https://photoenhancer.pro/output/example.jpg",
+                                "metrics": {
+                                    "predict_time": 12.4,
+                                    "total_time": 47.8
+                                }
+                            }
+                        },
+                        "400": {
+                            "success": false,
+                            "message": "URL parameter or file is required"
+                        },
+                        "408": {
+                            "success": false,
+                            "message": "Upscale timeout"
+                        },
+                        "500": {
+                            "success": false,
+                            "message": "Upscale failed"
+                        }
+                    }
+                }
+            ]
         }
     ]
 }

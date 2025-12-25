@@ -40,6 +40,10 @@ const methodColor = (method: string) => {
 export default function DocsBody({ data, category }: { data: Feature; category: string }) {
     const fullPath = `${process.env.NEXT_PUBLIC_API_URL}/api/${category}${data.path}`;
 
+    const hasEnum =
+        Array.isArray(data.queryParameters) &&
+        data.queryParameters.some(param => Array.isArray(param.enum) && param.enum.length > 0);
+
     return (
         <div className="mx-auto w-full max-w-4xl space-y-8 px-4 py-6 md:px-6">
             <div className="space-y-2">
@@ -94,17 +98,22 @@ export default function DocsBody({ data, category }: { data: Feature; category: 
                                         <TableHead>Type</TableHead>
                                         <TableHead>Required</TableHead>
                                         <TableHead>Default</TableHead>
+
+                                        {hasEnum && <TableHead>Enum</TableHead>}
                                     </TableRow>
                                 </TableHeader>
+
                                 <TableBody>
                                     {data.queryParameters.map(param => (
                                         <TableRow key={param.name}>
                                             <TableCell className="font-mono">
                                                 {param.name}
                                             </TableCell>
+
                                             <TableCell>
                                                 <Badge variant="outline">{param.type}</Badge>
                                             </TableCell>
+
                                             <TableCell>
                                                 {param.required ? (
                                                     <Badge variant="destructive">Yes</Badge>
@@ -112,11 +121,35 @@ export default function DocsBody({ data, category }: { data: Feature; category: 
                                                     'No'
                                                 )}
                                             </TableCell>
+
                                             <TableCell className="font-mono">
                                                 {param.default !== undefined
                                                     ? String(param.default)
                                                     : '-'}
                                             </TableCell>
+
+                                            {hasEnum && (
+                                                <TableCell>
+                                                    {Array.isArray(param.enum) &&
+                                                    param.enum.length > 0 ? (
+                                                        <div className="flex flex-wrap gap-1">
+                                                            {param.enum.map(value => (
+                                                                <Badge
+                                                                    key={String(value)}
+                                                                    variant="secondary"
+                                                                    className="font-mono text-xs"
+                                                                >
+                                                                    {String(value)}
+                                                                </Badge>
+                                                            ))}
+                                                        </div>
+                                                    ) : (
+                                                        <span className="text-muted-foreground">
+                                                            -
+                                                        </span>
+                                                    )}
+                                                </TableCell>
+                                            )}
                                         </TableRow>
                                     ))}
                                 </TableBody>

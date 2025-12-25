@@ -31,6 +31,7 @@ export interface QueryParameter {
     type: 'string' | 'number' | 'boolean' | 'file';
     required?: boolean;
     default?: unknown;
+    enum?: string[];
 }
 
 /* Responses map (status code → response) */
