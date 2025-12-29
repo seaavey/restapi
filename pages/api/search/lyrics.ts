@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { JSONError, JSONErrorData, JSONSuccess } from '@/lib/response';
+import { JSONError, JSONErrorData, JSONSuccess } from '@/features/shared/lib/response';
 import axios from 'axios';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

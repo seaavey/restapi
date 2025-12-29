@@ -1,4 +1,4 @@
-import { JSONErrorData } from '@/lib/response';
+import { JSONErrorData } from '@/features/shared/lib/response';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import formidable, { File } from 'formidable';
 import fs from 'fs';

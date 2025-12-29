@@ -4,7 +4,7 @@ export default async function DocsCategoryPage(props: { params: Promise<{ catego
     const params = await props.params;
     const path = params.category || [];
 
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/v1/check?category=${path}`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/check?category=${path}`, {
         method: 'HEAD',
         cache: 'no-store',
     });

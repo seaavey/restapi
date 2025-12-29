@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
+import { Button } from '@/features/shared/components/ui/button';
 
 export default function DocsPage() {
     return (

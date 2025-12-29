@@ -1,23 +1,23 @@
 'use client';
 
-import Navbar from '@/components/NavbarLanding';
-import Footer from '@/components/Footer';
-import HeroSection from '@/layouts/Landing/Hero';
-import FeaturesSection from '@/layouts/Landing/Features';
-import AboutSection from '@/layouts/Landing/About';
-import ContactSection from '@/layouts/Landing/Contact';
+import LandingNavbar from '@/features/landing/components/LandingNavbar';
+import LandingFooter from '@/features/landing/components/LandingFooter';
+import HeroSection from '@/features/landing/components/Hero';
+import FeaturesSection from '@/features/landing/components/Features';
+import AboutSection from '@/features/landing/components/About';
+import ContactSection from '@/features/landing/components/Contact';
 
 export default function HomePage() {
     return (
         <div className="bg-background min-h-screen">
-            <Navbar />
+            <LandingNavbar />
             <main>
                 <HeroSection />
                 <FeaturesSection />
                 <AboutSection />
                 <ContactSection />
             </main>
-            <Footer />
+            <LandingFooter />
         </div>
     );
 }

@@ -1,6 +1,6 @@
-import DocsBody from '@/layouts/Docs/Body';
-import DocsHeader from '@/layouts/Docs/Header';
-import { Feature } from '@/types/APISchema';
+import DocsBody from '@/features/docs/components/Body';
+import DocsHeader from '@/features/docs/components/Header';
+import { Feature } from '@/features/api/types/api';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
@@ -40,7 +40,7 @@ async function getService(feature: string): Promise<{
     ok: boolean;
     data: Feature;
 } | null> {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/v1/check/${feature}`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/check/${feature}`, {
         next: { revalidate: 60 },
     });
 

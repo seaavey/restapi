@@ -1,5 +1,5 @@
-import { JSONErrorData, JSONSuccess } from '@/lib/response';
-import { isPinterestURL, isURL } from '@/lib/validation';
+import { JSONErrorData, JSONSuccess } from '@/features/shared/lib/response';
+import { isPinterestURL, isURL } from '@/features/shared/lib/validation';
 import { NextApiRequest, NextApiResponse } from 'next';
 import axios from 'axios';
 
